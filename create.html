@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - BlogSpot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Vintage Blogs</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="create.html">Create Post</a>
+            <div class="user-profile">
+                <span>Welcome, User</span>
+                <button onclick="logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2 class="form-title">Create New Post</h2>
+            <form id="createPostForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn">Create Post</button>
+            </form>
+        </div>
+
+        <div class="posts-list">
+            <h3>Your Posts</h3>
+            <div id="postsList"></div>
+        </div>
+    </div>
+
+    <script src="scrp.js"></script>
+</body>
+</html>
